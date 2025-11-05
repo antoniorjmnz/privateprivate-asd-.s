@@ -9,7 +9,9 @@
                 <field name="surname"/>
                 <field name="DNI"/>
                 <field name="email"/>
-                <field name="university"/>
+                <field name="country_id"/>
+                <field name="photo"/>
+
             </list> </field>
     </record>
     
@@ -23,11 +25,13 @@
                         <group string="Datos Personales">
                             <field name="name"/>
                             <field name="surname"/>
+                            <field name="country_id"/>                            
                             <field name="DNI"/>
+                            <field name="photo"/>
                         </group>
                         <group string="Datos de Acceso y Académicos">
                             <field name="email"/>
-                            <field name="university"/>
+
                             <field name="password" password="True"/>
                         </group>
                     </group>

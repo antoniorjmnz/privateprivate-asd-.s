@@ -19,9 +19,8 @@ Long description of module's purpose
         "security/security.xml",
         "security/ir.model.access.csv",
         "views/views.xml",
+        "data/universities.xml",
     ],
-    # only loaded in demonstration mode
-    "demo": [
-        "demo/demo.xml",
-    ],
+
+    
 }

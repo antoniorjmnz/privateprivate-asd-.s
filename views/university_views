@@ -1,0 +1,42 @@
+<odoo>
+    <record id="view_university_tree" model="ir.ui.view">
+        <field name="name">upocubo.university.tree</field>
+        <field name="model">upocubo.university</field>
+        <field name="arch" type="xml">
+            <tree string="Universidades">
+                <field name="name"/>
+                <field name="city"/>
+                <field name="country"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_university_form" model="ir.ui.view">
+        <field name="name">upocubo.university.form</field>
+        <field name="model">upocubo.university</field>
+        <field name="arch" type="xml">
+            <form string="Universidad">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="city"/>
+                        <field name="country"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_university" model="ir.actions.act_window">
+        <field name="name">Universidades</field>
+        <field name="res_model">upocubo.university</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_university_root" name="Universidades"/>
+
+    <menuitem id="menu_university_main"
+              name="Gestión de Universidades"
+              parent="menu_university_root"
+              action="action_university"/>
+</odoo>

@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+
+from odoo import models, fields, api
+
+
+class University(models.Model):
+    _name = 'upocubo.university'
+    _description = 'Universidad'
+    _order = 'name'
+
+    name = fields.Char(
+        string='Nombre de la universidad',
+        required=True,
+        help='Nombre oficial de la universidad'
+    )
+    city = fields.Char(
+        string='Ciudad',
+        help='Ciudad donde se encuentra la universidad'
+    )
+    country = fields.Many2one(
+        'res.country',
+        string='País',
+        help='País donde se encuentra la universidad'
+    )
+
+    user_ids = fields.One2many(
+        'upocubo.users',
+        'university',
+        string='Usuarios'
+    )

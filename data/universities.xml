@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="uni_sevilla" model="upocubo.university">
+        <field name="name">Universidad de Sevilla</field>
+        <field name="city">Sevilla</field>
+    </record>
+    <record id="uni_granada" model="upocubo.university">
+        <field name="name">Universidad de Granada</field>
+        <field name="city">Granada</field>
+    </record>
+    <record id="uni_malaga" model="upocubo.university">
+        <field name="name">Universidad de Málaga</field>
+        <field name="city">Málaga</field>
+    </record>
+    <record id="uni_cordoba" model="upocubo.university">
+        <field name="name">Universidad de Córdoba</field>
+        <field name="city">Córdoba</field>
+    </record>
+    <record id="uni_cadiz" model="upocubo.university">
+        <field name="name">Universidad de Cádiz</field>
+        <field name="city">Cádiz</field>
+    </record>
+    <record id="uni_jaen" model="upocubo.university">
+        <field name="name">Universidad de Jaén</field>
+        <field name="city">Jaén</field>
+    </record>
+    <record id="uni_huelva" model="upocubo.university">
+        <field name="name">Universidad de Huelva</field>
+        <field name="city">Huelva</field>
+    </record>
+    <record id="uni_upo" model="upocubo.university">
+        <field name="name">Universidad Pablo de Olavide</field>
+        <field name="city">Sevilla</field>
+    </record>
+</odoo>

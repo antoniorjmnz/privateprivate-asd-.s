@@ -6,7 +6,8 @@ from odoo import models, fields, api
 class Usuario(models.Model):
     _name = "upocubo.users"
     _description = "Upocubo User"
-
+    _order = 'name'
+    
     name = fields.Char(
         string="First name", size=60, required=True, help="Name of the user"
     )
@@ -17,12 +18,13 @@ class Usuario(models.Model):
     email = fields.Char(
         string="Email", size=60, required=True, help="Email of the user"
     )
-    university = fields.Char(
-        string="University name",
-        size=60,
+    country_id = fields.Many2one(
+        comodel_name="res.country",
+        string="Country",
         required=True,
-        help="University name of the user",
-    )
+        help="Country of the user",
+    )    
     password = fields.Char(
-        string="Last name", size=60, required=True, help="Password of the user"
+        string="Password", size=60, required=True, help="Password of the user"
     )
+    photo = fields.Binary('Photo', help="Profile picture of the user")

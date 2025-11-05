@@ -1,0 +1,68 @@
+<odoo>
+    
+<record id="upocubo_users_view_tree" model="ir.ui.view">
+        <field name="name">upocubo.users.list</field> <field name="model">upocubo.users</field>
+        <field name="arch" type="xml">
+            
+            <list string="Usuarios">
+                <field name="name"/>
+                <field name="surname"/>
+                <field name="DNI"/>
+                <field name="email"/>
+                <field name="university"/>
+            </list> </field>
+    </record>
+    
+    <record id="upocubo_users_view_form" model="ir.ui.view">
+        <field name="name">upocubo.users.form</field>
+        <field name="model">upocubo.users</field>
+        <field name="arch" type="xml">
+            <form string="Usuario">
+                <sheet>
+                    <group>
+                        <group string="Datos Personales">
+                            <field name="name"/>
+                            <field name="surname"/>
+                            <field name="DNI"/>
+                        </group>
+                        <group string="Datos de Acceso y Académicos">
+                            <field name="email"/>
+                            <field name="university"/>
+                            <field name="password" password="True"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="upocubo_users_action" model="ir.actions.act_window">
+        <field name="name">Usuarios</field>
+        <field name="res_model">upocubo.users</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crea el primer usuario de Upocubo
+            </p>
+        </field>
+    </record>
+    
+    <menuitem 
+        name="Upocubo" 
+        id="main_upocubo_menu" 
+        groups="upocubo.group_upocubo_manager"/>
+        
+    <menuitem 
+        name="Gestión de Usuarios" 
+        id="upocubo_users_menu" 
+        parent="main_upocubo_menu"
+        groups="upocubo.group_upocubo_manager"/>
+        
+    <menuitem 
+        name="Usuarios" 
+        id="upocubo_users_submenu" 
+        parent="upocubo_users_menu"
+        groups="upocubo.group_upocubo_manager"
+        action="upocubo_users_action"/>
+        
+</odoo>

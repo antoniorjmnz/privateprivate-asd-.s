@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_upocubo_users_manager,access.upocubo.users.manager,model_upocubo_users,group_upocubo_manager,1,1,1,1
